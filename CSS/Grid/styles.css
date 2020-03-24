@@ -1,0 +1,76 @@
+.container {
+    display: grid;
+    grid-gap: 3px;
+    /*grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 200px 50px;
+    /* experimentation for layouts
+    grid-template-areas:
+        ". h h h h h h h h h h ."
+        "m c c c c c c c c c c c"
+        ". f f f f f f f f f f .";*/
+
+    /* auto-fit: automatically place elements in the column if there is space on the screen
+    minmax: specifies the minimum width and allows the elements to stretch*/
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 100px;
+}
+
+.header {
+    grid-column-start: 2;
+    grid-column-end: -1;
+    /* grid-area: h; */
+}
+
+.menu {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    /* grid-area: m;*/
+}
+
+.content {
+    grid-column-start: 2;
+    grid-column-end: -1;
+    /*grid-area: c;*/
+}
+
+.footer {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    /*grid-area: f;*/
+}
+
+.container div:nth-child(even) {
+    background: #ccc;
+}
+
+.container div:nth-child(odd) {
+    background: coral;
+}
+
+.imageContainer {
+    margin: 10px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-rows: 75px;
+    grid-auto-flow: dense;/* allows for source order independence, create a layout regardless of html ordering */
+}
+
+.wide {
+    grid-column-start: auto;
+    grid-column-end: span 2;
+}
+
+.tall {
+    grid-row: span 2;
+}
+
+.big {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.imageContainer > div > img {
+    width: 100%;
+    height: 100%;
+}

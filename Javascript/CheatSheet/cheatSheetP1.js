@@ -7,7 +7,7 @@ const COLOR_ORANGE = "#ff7f00";//constant that is hardcoded
 let message = "Hello";//strict way to declare a variable
 
 const userBirthday = "??/??/????";//constant that is unkown before execution
-
+console.log("Part 1 Output");
 //alert example
 console.log(message);
 

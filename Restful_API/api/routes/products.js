@@ -27,7 +27,7 @@ router.post('/', (req, res, next) => {
     product.save()
     .then(result => {
         console.log(result);
-        res.status(201).res.json({ 
+        res.status(201).json({ 
             msg: 'Handling POST requests to /products',
             createdProduct: result
         });
